@@ -11,6 +11,7 @@
 	--color-cornflower: #e7e9fc;
 	--color-cloud: #f4f4fd;
 	--color-dairy: #fcfcfc;
+    --color-border: #E7E9FC;
 }
 
 p,h1,h2,h3,h4,h5,h6 {
@@ -28,6 +29,7 @@ button {
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 body {
@@ -54,7 +56,6 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    outline: 2px solid red;
    }
 
   .section-title {
@@ -85,8 +86,7 @@ body {
 .header {
     padding-top: 24px;
     padding-bottom: 24px;
-
-    background-color: rgb(204, 255, 0);
+    border-bottom: 1px solid var(--color-border); 
 }
 
 .main-header {
@@ -100,11 +100,9 @@ body {
 }
 
 .header-logo{
-
     display: block;
     /* padding-top: 24px;
     padding-bottom: 24px; */
-
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -113,8 +111,8 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--actent-color-iris);
-
 }
+
 /* .header-logo:focus,
 .header-logo:hover
 {
@@ -122,24 +120,18 @@ body {
  } */
  
  /* .header-logo:active */
+
 .color-logo  {
     color: var(--title-text-color-navy-blue);
 }
+
 .header-list {
     display: flex;
     margin-left: 76px;
 }
 
-/* Еще один способ убрать маржин в последнем элементе */
-/* .header-list .item:not(:last-child) {
-    margin-right: 40px;
-    outline: 1px solid red;
-} */
-
 .header-list .item + .item {
     margin-left: 40px;
-
-    outline: 1px solid red;
 }
 
 .header-link {
@@ -165,7 +157,6 @@ body {
 
 .header-address {
     margin-left: auto;
-
     text-decoration: none;
     font-style: normal;
     color: var(--primary-text-color-slate);
@@ -177,8 +168,7 @@ body {
 
 .header-address-list .item +.item {
     margin-left: 40px;
-
-    outline: 1px solid red;}
+}
 
 .header-address-link {
 font-style: normal;
@@ -187,8 +177,6 @@ font-size: 16px;
 line-height: 1.5;
 color: var(--primary-text-color-slate);
 }
-
-
 
 .header-address-link:hover,
 .header-address-link:focus {
@@ -205,7 +193,6 @@ color: var(--active-color-ocean)
  }  
 
  .hero-title {
-
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
@@ -217,16 +204,21 @@ color: var(--active-color-ocean)
  }
     
  .hero-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    align-items: center;
     letter-spacing: 0.04em;
     color: var(--title-hero-color-white);
-    display: flex;
-background: var(--actent-color-iris);
+    background: var(--actent-color-iris);
+    padding: 16px 32px;
+    border: 1px splid var(--actent-color-iris);
+    border-radius: 4px;
  }
+
  .hero-button:hover,
  .hero-button:focus {
     background-color: var(--active-color-ocean);
@@ -237,36 +229,51 @@ background: var(--actent-color-iris);
 .features {
     padding-top: 120px;
     padding-bottom: 120px;
-
-    background-color: #3b8e97;
 }
+
 .features-title {
     letter-spacing: 0.02em;
 }
 
 .features-list {
-    display: flex
-}
-.features-item {
-    width: 264px;
-    background-color: tomato;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  margin-left: -24px;
 }
 
-.features .item+.item {
+.features-item {
+    flex-basis: calc(100% / 4 - 24px);
     margin-left: 24px;
 }
+
 .features-item-title {
     display:block;
     margin-bottom: 8px;
 }
+
 .features-text {
     display: block;
 }
        
 /** -------------------WHAT ARE WE DOING------------------- */
-.doing {
 
-    background-color: tomato;
+.doing {
+    padding-bottom: 120px;
+}
+
+.doing-title {
+    padding-bottom: 72px;
+}
+
+.doing-list {
+    display: flex;
+    margin-left: -24px;
+}
+
+.doing-item {
+    flex-basis: calc(100% / 3 - 24px);
+    margin-left: 24px;
 }
 
 /** -------------------OUR TEAM------------------- */
@@ -274,57 +281,110 @@ background: var(--actent-color-iris);
     background-color: var(--color-cloud);
     padding-top: 120px;
     padding-bottom: 120px;
-} */
+} 
+
 .team-title {
     letter-spacing: 0.02em;
-    }        
+    padding-bottom: 72px;
+    }    
+    
+.team-list {
+    display: flex;
+}    
+
 .team-item {
-    background-color: var(--primary-bg-color-white);}
+    background-color: var(--primary-bg-color-white);
+    padding-bottom: 32px;
+    margin-left: -24px;
+}
+
+.team-card-item { 
+    display: flex;
+    flex-basis: calc(100% / 4 - 24px);
+    margin-left: 24px;
+    width: 264px;
+    margin-right: 24px;
+}
+   
+
+.team-card-thumb {
+    margin-bottom: 32px;
+}
 .team-item-title {
     letter-spacing: 0.02em;
-}                              
+    text-align: center;
+    margin-bottom: 8px;
+}                       
+
+.team-text {
+    text-align: center;
+}
+
+
 /** -------------------FOOTER------------------- */
+
 .footer {
     background-color: var(--dark-bg-color);
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
+.main-footer {
+    display: block;
+    align-items: center;
+}
+
 .footer-logo {
+    display: block;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--actent-color-iris)
+    color: var(--actent-color-iris);
+    margin-bottom: 16px;
 }
 
 .color-logo-footer {
     color: var(--color-cloud)
 }
+
 .footer-text {
+    display: block;
     font-size: 16px;
     line-height: 1.5;
+    width: 264px;
     color: var(--color-cloud);
 }
+
 
 /** -------------------PORTFOLIO------------------- */
 
 .portfolio {
 padding-top: 96px;
 padding-bottom: 120px;
-
-background-color: tomato;
-
 }
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-left: -24px;
+}
+
 .filter-list-btn {
+    display: block;
     background-color: var(--color-cloud);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--actent-color-iris);
+    padding: 12px 24px;
+    margin-left: 24px;
+    margin-bottom: 72px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
  }
 
  .filter-list-btn:hover,
@@ -336,15 +396,27 @@ background-color: tomato;
  .portfolio-list {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -24px;
+    margin-top: -48px;
  }
 
  .flex-item {
     display: flex;
-    width: 360px;
-    margin-right: 30px;
-    margin-bottom: 48px;
+    flex-basis: calc(100% / 3 - 24px );
+    margin-left: 24px;
+    margin-top: 48px;
  }
 
- .flex-item:nth-child(3n) {
-    margin-right: 0;
+.card-thumb {
+}
+
+.portfolio-item-title {
+    margin-bottom: 8px;
+}
+
+.card-content {
+    padding: 32px 16px;
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
 }
