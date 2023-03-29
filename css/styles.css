@@ -55,7 +55,8 @@
         width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .section-title {
@@ -84,8 +85,6 @@
 
     /** -------------------HEADER------------------- */
     .header {
-        padding-top: 24px;
-        padding-bottom: 24px;
         border-bottom: 1px solid var(--color-border); 
     }
 
@@ -200,6 +199,9 @@
         text-align: center;
         letter-spacing: 0.02em;
         color: var(--title-hero-color-white);
+        max-width: 496px;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 48px;
     }
         
@@ -263,7 +265,7 @@
     }
 
     .doing-title {
-        padding-bottom: 72px;
+        margin-bottom: 72px;
     }
 
     .doing-list {
@@ -285,7 +287,7 @@
 
     .team-title {
         letter-spacing: 0.02em;
-        padding-bottom: 72px;
+        margin-bottom: 72px;
         }    
         
     .team-list {
@@ -300,8 +302,8 @@
         background-color: var(--primary-bg-color-white);
     }
     
-    .team-card-thumb {
-    }
+    /* .team-card-thumb {
+    } */
     .team-item-title {
         letter-spacing: 0.02em;
         margin-bottom: 8px;
@@ -309,7 +311,6 @@
 
     .team-card-content {
         text-align: center;
-        padding: 32px 16px;
     }
 
     /** -------------------FOOTER------------------- */
@@ -320,9 +321,13 @@
         padding-bottom: 100px;
     }
 
-    .main-footer {
+    .footer-logo-text {
         display: block;
         align-items: center;
+        margin-right: auto;
+        width: 264px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .footer-logo {
@@ -345,7 +350,6 @@
         display: block;
         font-size: 16px;
         line-height: 1.5;
-        width: 264px;
         color: var(--color-cloud);
     }
 
@@ -361,6 +365,7 @@
     display: flex;
     justify-content: center;
     margin-left: -24px;
+    margin-bottom: 72px;
     }
 
     .filter-list-btn {
@@ -373,7 +378,6 @@
         color: var(--actent-color-iris);
         padding: 12px 24px;
         margin-left: 24px;
-        margin-bottom: 72px;
         border: 1px solid var(--color-border);
         border-radius: 4px;
     }
@@ -387,19 +391,15 @@
     .portfolio-list {
         display: flex;
         flex-wrap: wrap;
-        margin-left: -24px;
-        margin-top: -48px;
+        gap: 48px 24px;
     }
 
-    .flex-item {
-        display: flex;
-        flex-basis: calc(100% / 3 - 24px );
-        margin-left: 24px;
-        margin-top: 48px;
+    .portfolio-item {
+        flex-basis: calc((100% - 48px) / 3);
     }
-
-    .card-thumb {
-    }
+    
+    /* .card-thumb {
+    } */
 
     .portfolio-item-title {
         margin-bottom: 8px;
